@@ -499,16 +499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e429b4160714267988d9e5fc3fd17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 1517747638}
   moveSpeed: 5
-  move:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3b54eacb-dd9c-4fe4-aa84-2134648049c8
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  projectile: {fileID: 1740039685187231934, guid: c8d45f708d1a34d1799b8300845670e3, type: 3}
+  fireSpeed: 5
 --- !u!50 &1517747638
 Rigidbody2D:
   serializedVersion: 5
@@ -549,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
