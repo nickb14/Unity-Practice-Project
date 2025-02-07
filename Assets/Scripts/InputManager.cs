@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class InputController : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
-    void Update()
+    // private Vector2 _direction;
+
+    private void Update()
     {
+        EventManager.OnInput(new Vector3(0f, 0f, 0f));
         if (Input.GetKey("w"))
         {
             EventManager.OnInput(new Vector3(0f, 1f, 0f));
