@@ -1,5 +1,3 @@
-using System;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,10 +33,10 @@ public class PlayerController : MonoBehaviour
 
     void OnAttack(InputValue value)
     {
-        GameObject p = Instantiate(projectile);
+        Vector2 newPos = rb.position + (Vector2)Vector3.Normalize(rotation) * 0.8f;
+        GameObject p = Instantiate(projectile, newPos, Quaternion.identity);
 
         Rigidbody2D p_rb = p.GetComponent<Rigidbody2D>();
-        p_rb.position = rb.position;
         p_rb.linearVelocity = Vector3.Normalize(rotation) * fireSpeed;
     }
 
